@@ -7,8 +7,8 @@ from kafka import KafkaConsumer, KafkaProducer
 config = ConfigParser.RawConfigParser()
 config.read('config.cfg')
 
-KAFKA_ENDPOINT = '{0}:{1}'.format(config.get('GCP', 'kafka_endpoint'), config.get('GCP', 'kafka_endpoint_port'))
-KAFKA_TOPIC = config.get('GCP', 'topic')
+KAFKA_ENDPOINT = '{0}:{1}'.format(config.get('Kafka', 'kafka_endpoint'), config.get('Kafka', 'kafka_endpoint_port'))
+KAFKA_TOPIC = config.get('Kafka', 'topic')
 
 class Producer(threading.Thread):
     def __init__(self):

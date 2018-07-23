@@ -5,6 +5,20 @@ This project enables tweets streaming process from [Twitter](https://developer.t
 # Prerequisite
 You need to have a running Kafka service.
 
+# Step-by-step
+
+Open config.cfg and edit the values using text editor:
+
+```
+$ vim config.cfg
+```
+
+or 
+
+```
+$ nano config.cfg
+```
+
 Run kafka-test.py to check if `Producer` and `Consumer` are able to send and receive messages.
 
 ```

@@ -26,8 +26,8 @@ CONSUMER_SECRET = config.get('Twitter', 'consumer_secret')
 ACCESS_TOKEN = config.get('Twitter', 'access_token')
 ACCESS_TOKEN_SECRET = config.get('Twitter', 'access_token_secret')
 TWITTER_STREAMING_MODE = config.get('Twitter', 'streaming_mode')
-KAFKA_ENDPOINT = config.get('GCP', 'kafka_endpoint')
-KAFKA_TOPIC = config.get('GCP', 'topic')
+KAFKA_ENDPOINT = '{0}:{1}'.format(config.get('Kafka', 'kafka_endpoint'), config.get('Kafka', 'kafka_endpoint_port'))
+KAFKA_TOPIC = config.get('Kafka', 'topic')
 NUM_RETRIES = 3
 
 class StdOutListener(StreamListener):
