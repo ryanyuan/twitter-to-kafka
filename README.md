@@ -3,11 +3,12 @@
 This project enables tweets streaming process from [Twitter](https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries.html) to [Kafka](http://kafka.apache.org/).
 
 # Prerequisite
+
 You need to have a running Kafka service.
 
-# Step-by-step
+# Environment configuartions and validations
 
-Open config.cfg and edit the values using text editor:
+Open `config.cfg` and edit the values using text editor:
 
 ```
 $ vim config.cfg
@@ -19,7 +20,7 @@ or
 $ nano config.cfg
 ```
 
-Run kafka-test.py to check if `Producer` and `Consumer` are able to send and receive messages.
+Now let's check if `Producer` and `Consumer` are able to send and receive messages.
 
 ```
 $ python kafka-test.py
@@ -29,7 +30,9 @@ ConsumerRecord(topic=u'mytopic', partition=1, offset=2245, timestamp=15320953667
 ...
 ```
 
-If you can see the above `ConsumerRecords`, then run the twitter-to-kafka.py
+# Step-by-step
+
+Run let's run the script to stream the tweets from Twitter to Apache Kafka.
 
 ```
 $ python twitter-to-kafka.py

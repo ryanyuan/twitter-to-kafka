@@ -13,7 +13,7 @@ import simplejson as json
 from tweepy import OAuthHandler
 from tweepy import Stream
 from tweepy.streaming import StreamListener
-from kafka import KafkaConsumer, KafkaProducer
+from kafka import KafkaProducer
 
 # Get your twitter credentials from the environment variables.
 # These are set in the 'twitter-stream.json' manifest file.
